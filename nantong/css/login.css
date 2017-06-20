@@ -1,0 +1,112 @@
+/**!
+ * 南通公共资源电子交易平台开评标系统-登录页样式
+ * date:2017-06-19
+ * author: csxiang;
+ */
+.mask {
+	width: 100%;  
+	height: 100%;  
+	background: rgba(153,153,153,0.44);  
+	position: fixed;  
+	z-index: 100;  
+	display: none; 
+}
+
+.loginbox {
+	width: 376px;
+	height: 336px;
+	background-color: #fff;
+	border-radius: 2px;
+	display: none;
+	position:fixed;    
+	left:50%;  
+	top:50%;  
+	margin-left:-188px;   
+	margin-top:-168px;  
+	z-index:111;  
+	overflow:auto;  	
+}
+.loginbox-hd {
+	padding: 20px 19px 30px 21px;
+	overflow: hidden;
+}
+.loginbox-hd h1 {
+	float: left;
+	font-size: 18px;
+	padding-left: 8px;
+	background: url(../images/login_icon.jpg) no-repeat left;
+}
+.loginbox-hd span {
+	float: right;
+	cursor: pointer;
+}
+.loginbox-bd {
+	padding-left: 40px;
+	padding-right: 40px;
+}
+.loginbox-bd .title h3 {
+	padding: 0 19px 11px 21px; 
+	font-size: 16px;
+	cursor: pointer;
+}
+.loginbox-bd .title h3.cur {
+	border-bottom: 3px solid #158ad4;
+	color:  #158ad4;
+}
+.loginbox-bd .title .user {
+	float: left;
+}
+.loginbox-bd .title .ca {
+	float: right;
+}
+.field-common input {
+	height: 40px;
+	line-height: 40px;
+	width: 256px;
+	border-radius: 2px;
+	border:1px solid #666;
+	padding-left: 40px;
+}
+.field-common .name {
+	margin-top: 29px;
+	margin-bottom: 20px;
+	background:url(../images/user01.png) no-repeat 14px center;
+}
+.field-common .pwd {
+	background:url(../images/pwd01.png) no-repeat 14px center;
+}
+.field-common .name:focus {
+	background-image: url(../images/user02.png);
+	border-color: #158ad4;
+}
+.field-common .pwd:focus {
+	background-image: url(../images/pwd02.png);
+	border-color: #158ad4;
+}
+.field-common .login-op {
+	height: 42px;
+	width: 100%;
+	border-radius: 2px;
+	text-align: center;
+	line-height: 42px;
+	background-color: #1257ba;
+	color: #fff;
+	font-size: 18px;
+	margin-top: 20px;
+	cursor: pointer;
+}
+.field-ca .pwd {
+	visibility: hidden;
+}
+.field-ca .name {
+	width: 231px;
+	padding-right: 25px;
+}
+.field-ca .input-wrap {
+	position: relative;
+}
+.field-ca .input-wrap img {
+	position:absolute;
+	right: 9px;
+	top: 35px;
+}
