@@ -1,0 +1,43 @@
+/**!
+ * 沈河区多规合一业务综合查询机-二级页面图片
+ * date:2017-06-28
+ * author: csxiang;
+ */
+.level2-img {
+	margin-top: 268px;
+}
+.level2-img .menu {
+	margin-left: 32px;
+	margin-right: 38px;
+	float: left;
+}
+.level2-img .menu li {
+	height: 88px;
+	width: 174px;
+	text-align: center;
+	line-height: 88px;
+	color: #fff;
+	font-size: 24px;
+	cursor: pointer;
+	background-color: #57b9e1;
+	border-radius: 9px;
+	margin-bottom: 62px;
+}
+.level2-img .menu li.active,
+.level2-img .menu li:active {
+	background-color: #ff6800;
+}
+.level2-img .img-box {
+	width: 413px;
+	float: left;
+}
+.img-box a {
+	display: inline-block;
+	width: 413px;
+	height: 540px;
+}
+.img-box a img {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
