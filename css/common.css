@@ -1,4 +1,4 @@
-/* yui3 reset.css */
+﻿/* yui3 reset.css */
 html {
     color: #000;
     background: #FFF
@@ -100,7 +100,7 @@ iframe {
 
 /* yui3 fonts */
 body {
-    font: 12px/1.231 "Microsoft Yahei", arial, helvetica, clean, sans-serif;
+    font: 14px "Microsoft YaHei", arial, helvetica, clean, sans-serif;
     color: #333;
 }
 select,
@@ -163,66 +163,112 @@ a {
  * 适合页面的栅格系统
  * 页面公共头尾部分等
  */
-/* input框内字颜色 */
-.demo-input {
-	color: #999;
-}
-
-/* 背景的共同样式 */
-html {
-    *overflow: hidden;
-}
 body {
-    overflow: hidden;
+	width: 1080px;
+	height: 1920px;	
+	/*overflow: hidden;*/
+	background: url(../images/bg.jpg) no-repeat center;
 }
-.header {
-	height: 88px;
-	background: #fff;
+i {
+	font-style: normal;
 }
-.header > img {
-	margin-left: 2.78%;
-	margin-top: 20px;
+.container {
+	width: 941px;
+	margin-left: 82px;
 }
-/* 登录框 */
-.loginbg {
-    position: absolute;
-    left: 0px;
-    top: 88px;
-    z-index: -1
+
+.time {
+	padding-top: 585px;
+	margin-bottom: 40px;
+	overflow: hidden;
+	color: #fff;
 }
-.loginbg > img {
-	position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+.time span {
+	float: right;
+	font-size: 24px;
 }
-.login-btn {
-	position: relative;
+.time i {
+	color: #ffb017;
 }
-.login-btn a{
-	position: absolute;
-	display: block;
-	height: 180px;
-	width: 180px;
+/* content */
+.content {
+	height: 1078px;
 }
-.login-btn a img{
-	display: block;
+.content a {
+	color: #fff;
+}
+.con-hd {
+	width: 124px;
+	float: left;
+}
+.con-hd,
+.side {
+	font-size: 36px;
+}
+.con-hd li {
+	margin-bottom: 2px;
+}
+.con-hd li a {
+	display: inline-block;
 	width: 100%;
-	height: 100%;
+	height: 214px;
+	line-height: 40px;
+	text-align: center;
+	background-color: #1fa8ff;
+	border-top-left-radius: 4px;
+	border-bottom-left-radius: 4px;
 }
-.login-btn .worker {
-	left: 25.33%;
+.con-hd li span {
+	display: inline-block;
+	width: 40px;
+	margin-top: 62px;
+} 
+.con-hd .guide span {
+	margin-top: 24px;
 }
-.login-btn .admin {
-	left: 44.216%;
+.con-hd .chart span {
+	margin-top: 52px;
 }
-.login-btn .expert {
-	left: 63.91%;
+.con-hd .active a {
+	width: 115px;
+	background-color: #fff;
+	color: #ff6800;
+	border-left: 9px solid #ff6800;
 }
-
-
-
+.con-bd {
+	width: 717px;
+	height: 1078px;
+	float: left;
+	background-color: #fff9ef;
+}
+.side {
+	widows: 100px;
+	float: right;
+}
+.side li {
+	margin-bottom: 2px;
+}
+.side a {
+	display: inline-block;
+	height: 217px;
+	width: 100px;
+	color: #fff;
+	text-align: center;
+	border-top-right-radius: 4px;
+	border-bottom-right-radius: 4px;
+	background-color: #1fa8ff;
+}
+.side .active a {
+	background-color: #ff6800;
+}
+.side a:active{
+	background-color: #ff6800;
+}
+.side li span {
+	display: inline-block;
+	width: 40px;
+	margin-top: 62px;
+} 
 
 
 

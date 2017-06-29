@@ -1,0 +1,36 @@
+/**!
+ * 沈河区多规合一业务综合查询机-三级页面
+ * date:2017-06-28
+ * author: csxiang;
+ */
+.level3 .pos {
+	color: #666;
+	font-size: 24px;
+	margin-top: 70px;
+	margin-left: 64px;
+}
+.pos span {
+	color: #ff6800;
+}
+
+.level3 .stage {
+	margin-top: 75px;
+	margin-left: 135px;
+}
+.stage li {
+	margin-bottom: 67px;
+}
+.stage a {
+	display: block;
+	width: 434px;
+	height: 101px;
+	line-height: 101px;
+	text-align: center;
+	font-size: 30px;
+	border-radius: 9px;
+	background-color: #00bcd4;
+}
+.stage li.active a,
+.stage a:active {
+	background-color: #ff6800;
+}
