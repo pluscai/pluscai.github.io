@@ -229,6 +229,7 @@ i {
 .con-hd .chart span {
 	margin-top: 52px;
 }
+.con-hd a:active,
 .con-hd .active a {
 	width: 115px;
 	background-color: #fff;
