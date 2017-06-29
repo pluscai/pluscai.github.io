@@ -166,7 +166,7 @@ a {
 body {
 	width: 1080px;
 	height: 1920px;	
-	/*overflow: hidden;*/
+	overflow: hidden;
 	background: url(../images/bg.jpg) no-repeat center;
 }
 i {
