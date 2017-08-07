@@ -1,0 +1,487 @@
+/* ！标桥课堂--用户中心
+ * author: caishuxiang
+ * date:2017-08-02
+ * */
+body {
+	background-color: #f7f7f7;
+}
+.header {
+	height: 64px;
+	line-height: 64px;
+	background-color: #424242;
+}
+.header .logo {
+	float: left;
+	margin-top: 15.5px;
+}
+.header a {
+	color: #fff;
+}
+.header .overview,
+.header .platnav {
+	float: left;
+	font-size: 16px;
+}
+.header .overview {
+	margin-left: 36px;
+	margin-right: 28px;
+}
+.hd-right {
+	float: right;
+}
+.hd-right li {
+	float: left;
+	margin-left: 20px;
+}
+
+.sdnav {
+	margin-top: 30px;
+	background-color: #fff;
+}
+.sdnav li {
+	width: 100%;
+	height: 44px;
+	line-height: 44px;
+	text-align: center;
+	border-top: 1px solid #f4f4f4;
+	
+}
+.sdnav li a {
+	display: inline-block;
+	color: #333;
+	font-size: 16px;
+}
+.sdnav li i {
+	float: left;
+    margin-top: 10px;
+    margin-right: 20px;
+	width: 20px;
+	height: 23px;
+	background: url(../images/sdicons.png) no-repeat center;
+}
+.sdnav .item1 i {
+	background-position-x: 0px;
+}
+.sdnav .item2 i {
+	background-position-x: -20px;
+}
+.sdnav .item3 i {
+	background-position-x: -40px;
+}
+.sdnav .item4 i {
+	background-position-x: -60px;
+}
+.sdnav .item5 i {
+	background-position-x: -80px;
+}
+.sdnav .item6 i {
+	background-position-x: -100px;
+}
+.sdnav .item7 i {
+	background-position-x: -120px;
+}
+.sdnav .item8 i {
+	background-position-x: -140px;
+}
+.sdnav .quit {
+	display: block;
+	width: 163px;
+	height: 28px;
+	line-height: 28px;
+	text-align: center;
+	margin: 20px auto 22px;
+	border: 1px solid #59c3f3;
+	border-radius: 2px;
+	font-size: 16px;
+	color: #1cadee;;
+}
+.common-hd {
+	margin: 20px 0 0 20px;
+	overflow: hidden;
+}
+.common-hd h1 {
+	float: left;
+	font-size: 16px;
+	font-weight: bold;
+}
+.common-hd a {
+	float: right;
+	width: 70px;
+	height: 24px;
+	line-height:24px;
+	text-align: center;
+	margin-right: 20px;
+	border: 1px solid #59c3f3;
+	color: #1cadee;
+}
+
+
+.content {
+	margin-top: 30px;
+}
+.content .usr {
+	float: left;
+	height: 240px;
+	background-color: #fff;
+}
+.usr .common-hd a.signin {
+	float: left;
+	width: 60px;
+	height: 22px;
+	line-height: 22px;
+	text-align: center;
+	margin-left: 20px;
+	border-radius: 2px;
+	background-color: #ff9425;
+	color: #fff;
+	border: none;
+}
+.usr-detail {
+	float: left;
+	margin: 30px 0 0 20px;
+}
+.usr-detail .avatar {
+	float: left;
+	height: 74px;
+	width: 74px;
+	border-radius: 50%;
+}
+.usr-detail .avatar img {
+	width: 100%;
+	height: 100%;
+}
+.usr-detail-right {
+	float: left;
+	margin-left: 12px;
+}
+.usr-msg .name {
+	font-size: 16px;
+}
+.usr-msg .level {
+	color: #ff9425;
+	margin-left: 12px;
+	margin-right: 16px;
+	padding-left: 25px;
+	background: url(../images/gold.png) no-repeat left;
+}
+.usr-msg .more {
+	color: #1cadee;
+}
+.usr-certify {
+	margin-top: 10px;
+}
+.usr-certify li {
+	float: left;
+	margin-right: 9px;
+	text-align: center;
+}
+.usr-certify li p {
+	font-size: 10px;
+	color: #999;
+}
+.usr-count {
+	float: right;
+	margin-top: 30px;
+	margin-right: 20px;
+}
+.usr-count li {
+	float: left;
+	margin-left: 10px;
+	text-align: center;
+}
+.usr-count .plat span{
+	color: #1cadee;
+}
+.usr-count .funs span{
+	color: #73ca45;
+}
+.usr-count .zan span{
+	color: #ff9425;
+}
+.usr-count p {
+	margin-top: 8px;
+	color: #999;
+}
+.usr-count .split {
+	width: 1px;
+	height: 46px;
+	background-color: #e5e5e5;
+}
+.usr-foud {
+	margin-top: 38px;
+	margin-left: 20px;
+}
+.usr-foud h3 {
+	float: left;
+}
+.usr-foud-dt {
+	float: left;
+	margin-left: 19px;
+	margin-right: 38px;
+}
+.usr-foud-dt li {
+	float: left;
+}
+.usr-foud-dt p span {
+	color: #ff9425;
+}
+.usr-foud-dt a {
+	color: #999;
+	margin-top: 3px;
+    display: inline-block;
+}
+.usr-foud-pay {
+	float: left;
+	text-align: center;
+}
+.usr-foud-pay a {
+	display: block;
+}
+.usr-foud-pay .pay {
+	width: 66px;
+	height: 22px;
+	line-height: 22px;
+	text-align: center;
+	border-radius: 2px;
+	background-color: #1cadee;
+	color: #fff;
+}
+.usr-foud-pay .detail {
+	color: #30b8f7;
+}
+.common-list li {
+	float: left;
+}
+.common-list .itemicon {
+	height: 74px;
+	width: 74px;
+	border-radius: 50%;
+	background-color: #e8f7fd;
+	background-image: url(../images/allicons.png);
+	background-repeat: no-repeat;
+	background-position-y: center;
+}
+.common-list .split {
+	width: 1px;
+	height: 39px;
+	margin: 28px 40px 0 40px;
+	background-color: #e5e5e5;
+}
+.common-list p {
+	margin-top: 20px;
+	color: #333;
+}
+.common-list p span {
+	font-size: 20px;
+	color: #ff9425;
+}
+.content .msgcenter {
+	float: left;
+	height: 240px;
+	background-color: #fff;
+}
+.msg-list {
+	margin-top: 30px;
+	margin-left: 50px;
+}
+.itemicon1 {
+	background-position-x: 14px;	
+}
+.itemicon2 {
+	background-position-x: -60px;	
+}
+.itemicon3 {
+	background-position-x: -134px;	
+}
+.itemicon4 {
+	background-position-x: -208px;	
+}
+.itemicon5 {
+	background-position-x: -282px;	
+}
+.itemicon6 {
+	background-position-x: -356px;	
+}
+.itemicon7 {
+	background-position-x: -430px;	
+}
+.itemicon8 {
+	background-position-x: -504px;	
+}
+.itemicon9 {
+	background-position-x: -578px;	
+}
+.itemicon10 {
+	background-position-x: -652px;	
+}
+.itemicon11 {
+	background-position-x: -726px;	
+}
+.itemicon12 {
+	background-position-x: -800px;	
+}
+.itemicon13 {
+	background-position-x: -874px;	
+}
+.itemicon14 {
+	background-position-x: -948px;	
+}
+
+.msg-list li {
+	float: left;
+}
+.content .idea {
+	float: left;
+	height: 206px;
+	margin-top: 20px;
+	background-color: #fff;
+}
+.idea .common-list {
+	margin-top: 24px;
+	margin-left: 30px;
+}
+
+.content .order {
+	height: 240px;
+	margin-top: 20px;
+	margin-bottom: 40px;
+	background-color: #fff;
+}
+.order-bd {
+	overflow: hidden;
+	margin-top: 30px;
+    margin-left: 20px;
+}
+.order-bd li {
+	float: left;
+}
+.order-bd .order-item {
+	width: 280px;
+}
+.order-bd .split {
+	width: 1px;
+	height: 150px;
+	background-color: #e8e8e8;
+	margin: 0 18px;
+}
+.order-dt {
+	margin-top: 2px;
+    margin-bottom: 26px;
+}
+.order-dt .date {
+	float: left;
+	color: #ff9425;
+}
+.order-dt .tech {
+	float: right;
+	margin-right: 15px;
+}
+.order-item .price {
+	font-size: 16px;
+	font-weight: bold;
+}
+.order-topay {
+	margin-top: 18px;
+}
+.order-topay .pay {
+	float: left;
+	width: 88px;
+	height: 32px;
+	line-height: 32px;
+	text-align: center;
+	border-radius: 2px;
+	color: #fff;
+	background-color: #1cadee;
+}
+.order-topay .comment a {
+	display: block;
+	color: #999;
+}
+
+
+/* footer */
+.ft-column {
+	height: 280px;
+	background-color: #696969;
+}
+.ft-list,
+.ft-list a {
+	color: #fff;
+}
+.ft-list {
+	height: 184px;
+	margin-top: 36px;
+}
+.ft-list .split {
+	float: left;
+	width: 1px;
+	height: 100%;
+	background-color: #9a9a9a;
+}
+.ft-list .ft-item {
+	float: left;
+	width: 115px;
+	text-align: left;
+	margin-left: 76px;
+}
+.ft-item .title {
+	margin-bottom: 20px;
+	font-size: 18px;
+	font-weight: bold;
+}
+.ft-item li {
+	margin-bottom: 15px;
+}
+.ft-list .ft-hotline {
+	margin-left: 0;
+	width: 224px;
+}
+.ft-hotline a {
+	display: inline-block;
+}
+.ft-hotline i {
+	float: left;
+	width: 26px;
+	height: 23px;
+    margin-top: -4px;
+    margin-right: 12px;
+}
+.ft-hotline .tel i {
+    background: url(../images/telqq.png) 0 0;
+}
+.ft-hotline .qq i {
+    background: url(../images/telqq.png) -26px 0;
+}
+.ft-focus a {
+	display: inline-block;
+}
+.ft-focus i {
+	float: left;
+	width: 23px;
+	height: 21px;
+    margin-top: -4px;
+    margin-right: 12px;
+    background: url(../images/contact.png);
+}
+.ft-focus .sina i {
+	background-position: 0 0;
+}
+.ft-focus .tencent i {
+	background-position: -23px 0;
+}
+.ft-focus .offical i {
+	background-position: -46px 0;
+}
+.ft-bt {
+	overflow: hidden;
+	height: 80px;
+	text-align: center;
+	background-color: #424242;
+	color: #bfbfbf;
+}
+.ft-bt p {
+	margin-top: 20px;
+}
+.ft-bt a {
+	color: #bfbfbf;
+}
