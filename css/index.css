@@ -35,8 +35,9 @@ body {
 }
 
 .sdnav {
-	margin-top: 30px;
+	margin-top: 94px;
 	background-color: #fff;
+	position: fixed;
 }
 .sdnav li {
 	width: 100%;
@@ -117,7 +118,8 @@ body {
 
 
 .content {
-	margin-top: 30px;
+	margin-top: 94px;
+	margin-left: 245px;
 }
 .content .usr {
 	float: left;
