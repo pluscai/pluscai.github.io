@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="renderer" content="webkit">
+	<link rel="stylesheet" href="css/common2.css">
+	<link rel="stylesheet" href="css/tune_table.css" />
+	<script src="js/jquery-1.11.0.min.js"></script>
+	<title>新点双11</title>
+	
+</head>
+<body>
+	<div class="tunetable">
+		<div class="g-lottery-case">
+			<a id="closebtn1" class="closebtn" href="javascript:void(0)"></a>
+			<div class="g-left">
+				<div class="g-lottery-box">
+					<div class="g-lottery-img">
+						<img class="playbtn" src="images/playbtn.png" alt="" />
+					</div>
+				</div>
+			</div>
+			<div class="g-right">
+				<!-- 初始页面 -->
+				<div class="init-state">
+					<div class="usr-info">
+						<div class="avatar"><img src="images/avatar.png" alt="" /></div>
+						<p>用户名称</p>
+					</div>
+					<p class="notice-num">您还有 <em class="playnum">2</em> 次抽奖机会</p>
+					<div class="rec-list">
+						<div class="rt-thead">
+							<span class="award-time">抽奖时间</span>
+							<span class="award-gd">中奖奖品</span>
+						</div>
+						<ul>
+							<li>
+								<span>2017-11-10 12:32</span>
+								<span>10新点币</span>
+							</li>
+							<li>
+								<span>2017-11-10 12:32</span>
+								<span>10新点币</span>
+							</li>
+							<li>
+								<span>2017-11-10 12:32</span>
+								<span>10新点币</span>
+							</li>
+							<li>
+								<span>2017-11-10 12:32</span>
+								<span>10新点币</span>
+							</li>
+							<li>
+								<span>2017-11-10 12:32</span>
+								<span>10新点币</span>
+							</li>
+							<li>
+								<span>2017-11-10 12:32</span>
+								<span>10新点币</span>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 中奖结果弹出 -->
+	<div class="tune-res" id="tune_res">
+		<div id="closebtn2" class="closebtn"></div>
+		<div class="notice-prize notice-prize-ok">
+			<img src="images/notice_prize.png" alt="" />
+			<p>您获得了10新点币</p>
+		</div>
+		<!-- 未中奖 -->
+		<div class="notice-prize notice-none" style="display: none;">
+			<img src="images/smileicon.png" alt="" />
+			<p>您没有机会了哦~下次再来吧~</p>
+		</div>
+		<a href="javascript:void(0)" class="confirm-btn">确定</a>
+	</div>
+	
+	<script src="js/jQueryRotate.js"></script>
+	<script src="js/layer/layer.js"></script>
+	<script type="text/javascript">
+		$(function() {
+		var $btn = $('.playbtn'),
+			$roate_btn = $('#roate-btn'),
+			$init_box = $('.init-state'),
+			$prize_box = $('.prize-box'),
+			$play_num = $('.playnum');
+		var playnum = 2; //初始次数，由后台传入
+		$play_num.html(playnum);
+		var isture = 0;
+		var clickfunc = function() {
+			var data = [1, 2, 3, 4, 5, 6, 7, 8,8,8];
+			//data为随机出来的结果，根据概率后的结果
+			data = data[Math.floor(Math.random() * 8)];   //Math.floor 对值向下取整   Math.random 返回0-1之间的随机数
+			switch(data) {
+				case 1:
+					rotateFunc(1, 0, '恭喜您获得2000元理财金!');
+					break;
+				case 2:
+					rotateFunc(2, 45, '谢谢参与~再来一次吧~');
+					break;
+				case 3:
+					rotateFunc(3, 90, '恭喜您获得5200元理财金!');
+					break;
+				case 4:
+					rotateFunc(4, 135, '恭喜您获得100元京东E卡，将在次日以短信形式下发到您的手机上，请注意查收!');
+					break;
+				case 5:
+					rotateFunc(5, 180, '谢谢参与~再来一次吧~');
+					break;
+				case 6:
+					rotateFunc(6, 225, '恭喜您获得1000元理财金!');
+					break;
+				case 7:
+					rotateFunc(6, 270, '恭喜您获得1000元理财金!');
+					break;
+				case 8:
+					rotateFunc(6, 315, '恭喜您获得1000元理财金!');
+					break;
+			}
+		}
+		$('.playbtn,#roate-btn').click(function() {
+			if(isture) return; // 如果在执行就退出
+			isture = true; // 标志为 在执行
+			//先判断是否登录,未登录则执行下面的函数
+			if(1 == 2) {
+				$play_num.html('0');
+				alert("请先登录");
+				isture = false;
+			} else { //登录了就执行下面
+				if(playnum <= 0) { //当抽奖次数为0的时候执行
+					$('.notice-prize-ok').hide();
+					$('.notice-none').show();
+					layer.open({
+					  type: 1, 
+					   title: false,
+	 				   closeBtn: 0,
+	 				   area:['400px','300px'],
+					   content: $('#tune_res') 
+					});
+					$play_num.html(0);
+					isture = false;
+				} else { //还有次数就执行
+					playnum = playnum - 1; //执行转盘了则次数减1
+					if(playnum <= 0) {
+						playnum = 0;
+					}
+					clickfunc();
+				}
+			}
+		});
+		var rotateFunc = function(awards, angle, text) {
+			isture = true;
+			$btn.stopRotate();
+			$btn.rotate({
+				angle: 0,
+				duration: 4000, //旋转时间
+				animateTo: angle + 1440, //让它根据得出来的结果加上1440度旋转
+				callback: function() {
+					isture = false; // 标志为 执行完毕
+					$play_num.html(playnum);
+					layer.open({
+					  type: 1, 
+					   title: false,
+	 				   closeBtn: 0,
+	 				   area:['400px','300px'],
+					   content: $('#tune_res') 
+					});
+				}
+			});
+		};
+	});
+
+
+	// 关闭按钮
+	$('#closebtn1').click(function(){
+		var index = parent.layer.getFrameIndex(window.name); 
+		parent.layer.close(index); 
+	});
+	
+	$('#closebtn2,.confirm-btn').click(function(){
+		layer.close(layer.index);
+	});
+	</script>
+</body>
+</html>

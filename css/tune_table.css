@@ -1,0 +1,202 @@
+html,body,.layui-layer {
+	background-color:transparent;
+}
+.tunetable {
+	position: relative;
+	width:1089px;
+	height: 543px;
+	background:url(../images/awardbg2.png);
+}
+
+/* tune-table */
+.g-lottery-case {
+	/*width: 500px;*/
+	/*height: 445px;*/
+	overflow: hidden;
+}
+	
+.g-lottery-case .g-left h2 {
+	font-size: 20px;
+	line-height: 32px;
+	font-weight: normal;
+	margin-left: 20px;
+}
+	
+.g-lottery-case .g-left {
+	width: 450px;
+	float: left;
+}
+	
+.g-lottery-box {
+	width: 400px;
+	height: 400px;
+	margin-left: 30px;
+	margin-top: 60px;
+	position: relative;
+	background: url(../images/ly-plate-c.gif) no-repeat;
+}
+	
+.g-lottery-box .g-lottery-img {
+	width: 340px;
+	height: 340px;
+	position: relative;
+	background: url(../images/zpanbg.png) no-repeat;
+	background-size: 100%;
+	left: 30px;
+	top: 30px;
+}
+	
+.g-lottery-box .playbtn {
+	width: 186px;
+	height: 186px;
+	position: absolute;
+	top: 77px;
+	left: 77px;
+	cursor: pointer;
+}
+/* g-right */
+.g-right {
+	float: left;
+	width:458px;
+	margin: 50px 0 0 50px;
+}
+.init-state {
+	width: 475px;
+}
+.init-state .notice-txt {
+	font-size: 16px;
+	color: #9c492c;
+	line-height: 28px;
+    margin-top: 20px;
+}
+.init-state .notice-bt {
+	margin: 50px 0 0 125px;
+}
+.init-state .usr-info {
+	text-align: center;
+}
+.init-state .usr-info p {
+	margin-top: 10px;
+	color: #b55639;
+	font-size: 16px;
+}
+.init-state .avatar {
+	/*text-align: center;*/
+}
+.init-state .avatar img {
+	width: 69px;
+	height:69px;
+}
+.rec-list {
+	margin-top: 30px;
+}
+.rec-list .rt-thead {
+	height:42px;
+	line-height: 42px;
+	width:475px;
+	border-radius: 4px 4px 0 0;
+	color:#fff;
+	font-size: 20px;
+	background: url(../images/rthead.png);;
+}
+.rec-list li span,
+.rec-list .rt-thead span{
+	float: left;
+	width: 235px;
+	text-align: center;
+}
+.rec-list li {
+	height: 33px;
+	line-height:33px;
+}
+.rec-list li:nth-child(odd){
+	background:#eaf2fd;
+}
+.rec-list li:nth-child(even){
+	background:#cfddf9;
+}
+
+
+.common-btn {
+	display: inline-block;
+	width:177px;
+	height:40px;
+	line-height: 35px;
+	text-align: center;
+	margin-top: 25px;
+	font-size: 22px;
+	color: #8d4c09;
+	background: url(../images/buttonbg.png) no-repeat;
+}
+.closebtn {
+	float: right;
+	width:27px;
+	height:27px;
+	margin:10px 10px 0 0;
+	background: url(../images/closebtn.png) no-repeat;
+	cursor: pointer;
+}
+
+/* prize-box */
+.prize-box {
+	display: none;
+	width: 400px;
+	text-align: center;
+}
+.prize-box p {
+	color: #b55639;
+}
+.notice-num {
+	margin:25px 0 0 0;
+	font-size:20px;
+	color: #b55639;
+	text-align: center;
+}
+.notice-num em {
+	font-size: 33px;
+}
+.notice-rec {
+	margin: 25px 0 25px 0;
+	font-size:16px;
+}
+.notice-more {
+	font-size:18px;
+}
+
+/* tune-res */
+.tune-res {
+	display: none;
+	position: relative;
+	width:400px;
+	height:300px;
+	overflow: hidden;
+	text-align: center;
+}
+.tune-res .notice-prize {
+	text-align: center;
+	margin-top: 20px;
+	height:231px;
+}
+.tune-res .notice-prize p {
+	margin-top: 18px;
+	font-size: 20px;
+	color:#b55639;
+	font-weight: 300;
+}
+.tune-res .closebtn {
+	position: absolute;
+    right: -10px;
+    top: -10px;
+}
+.tune-res .confirm-btn {
+	display: inline-block;
+    height: 28px;
+    line-height: 28px;
+    width: 80px;
+    background-color: #f1d142;
+    margin-top: 10px;
+    color: #8d4c09;
+    font-size: 16px;
+    border-radius: 5px;
+}
+    
