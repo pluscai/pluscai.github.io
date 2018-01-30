@@ -56,43 +56,71 @@
 		
 		var start = 0;
 		
-		$btn.mousedown(function(){
+		var os = function() {  
+		     var ua = navigator.userAgent,  
+		     isWindowsPhone = /(?:Windows Phone)/.test(ua),  
+		     isSymbian = /(?:SymbianOS)/.test(ua) || isWindowsPhone,   
+		     isAndroid = /(?:Android)/.test(ua),   
+		     isFireFox = /(?:Firefox)/.test(ua),   
+		     isChrome = /(?:Chrome|CriOS)/.test(ua),  
+		     isTablet = /(?:iPad|PlayBook)/.test(ua) || (isAndroid && !/(?:Mobile)/.test(ua)) || (isFireFox && /(?:Tablet)/.test(ua)),  
+		     isPhone = /(?:iPhone)/.test(ua) && !isTablet,  
+		     isPc = !isPhone && !isAndroid && !isSymbian;  
+		     return {  
+		          isTablet: isTablet,  
+		          isPhone: isPhone,  
+		          isAndroid : isAndroid,  
+		          isPc : isPc  
+		     };  
+		}();  
+		var mousedown1,mouseup1;
+		if(os.isAndroid || os.isPhone){
+			mousedown1='touchstart';
+			mouseup1='touchend'
+		}else if(os.isPc) {
+			mousedown1='mousedown';
+			mouseup1='mouseup'
+		}
+		
+		$btn[mousedown1](function(){
 			$(this).addClass('active');
 			
-			var frequency = arrFrequency[start];
-			if(!frequency){
-				start = 0;
-				frequency = arrFrequency[start];
-			}
-			start++;
-			// 创建音调控制对象
-			var oscillator = audioCtx.createOscillator();
-			// 创建音量控制对象
-			var gainNode = audioCtx.createGain();
-			// 音调音量关联
-			oscillator.connect(gainNode);
-			// 音量和设备关联
-			gainNode.connect(audioCtx.destination);
-			// 音色类型指定为正弦波
-			oscillator.type = 'sine';
-			// 设置音频频率
-			oscillator.frequency.value = frequency;
-			
-			
-			// 先把当前音量设为0
-			gainNode.gain.setValueAtTime(0,audioCtx.currentTime);
-			// 声音音量线性从0到1
-			gainNode.gain.linearRampToValueAtTime(1,audioCtx.currentTime+0.01);
-			// 声音走起
-			oscillator.start(audioCtx.currentTime);
-			
-			// 0.5秒时间内音量指数曲线变为0.01
-			gainNode.gain.exponentialRampToValueAtTime(0.01,audioCtx.currentTime +0.5);
-			// 关闭声音
-			oscillator.stop(audioCtx.currentTime + 0.5);
-		}).mouseup(function(){
+				var frequency = arrFrequency[start];
+				if(!frequency){
+					start = 0;
+					frequency = arrFrequency[start];
+				}
+				start++;
+				// 创建音调控制对象
+				var oscillator = audioCtx.createOscillator();
+				// 创建音量控制对象
+				var gainNode = audioCtx.createGain();
+				// 音调音量关联
+				oscillator.connect(gainNode);
+				// 音量和设备关联
+				gainNode.connect(audioCtx.destination);
+				// 音色类型指定为正弦波
+				oscillator.type = 'sine';
+				// 设置音频频率
+				oscillator.frequency.value = frequency;
+				
+				
+				// 先把当前音量设为0
+				gainNode.gain.setValueAtTime(0,audioCtx.currentTime);
+				// 声音音量线性从0到1
+				gainNode.gain.linearRampToValueAtTime(1,audioCtx.currentTime+0.01);
+				// 声音走起
+				oscillator.start(audioCtx.currentTime);
+				
+				// 0.5秒时间内音量指数曲线变为0.01
+				gainNode.gain.exponentialRampToValueAtTime(0.01,audioCtx.currentTime +0.5);
+				// 关闭声音
+				oscillator.stop(audioCtx.currentTime + 0.5);
+		});
+		$btn[mouseup1](function(){
 			$(this).removeClass('active');
-		});	
+		});
+		
 		
 
 			
