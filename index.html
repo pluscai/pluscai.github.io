@@ -1,118 +1,79 @@
-<!DOCTYPE html>
+<!DOCTYPE 
+html>
 <html lang="zh-CN">
 
 	<head>
 		<meta charset="UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
 		<meta name="renderer" content="webkit">
-		<link rel="stylesheet" href="css/common2.css">
-		<link rel="stylesheet" href="css/index.css" />
+		<link rel="stylesheet" href="css/common.css">
+		<link rel="stylesheet" href="css/index.css">
 		<script src="js/jquery-1.11.0.min.js"></script>
-		<title>新点双11</title>
+		<title></title>
 	</head>
 
 	<body>
-		<div class="bd">
-			<!-- 背景 -->
-			<div class="bg-box">
-				<img src="images/bg2.jpg" alt="" />
-			</div>
-			<!-- 主题 -->
-			<div class="toptitle">
-				<img src="images/titleimg.png" alt="" />
-			</div>
-			
-			<!-- 抽奖 -->
-			<div class="award-box clearfix">
-				<div class="circular-box">
-					<span class="circular-lt"></span>
-					<span class="circular-rt"></span>
-				</div>
-				<img class="gou-right" src="images/gou_right.png" alt="" />
-				<div class="award-roate"><img src="images/roate.png" alt="" /></div>
-				<div class="award-r">
-					<p>新用户注册标桥/老用户登录标桥，即可获得一次抽奖机会，最高赢取价值1500元造价软件！</p>
-					<p>想增加抽奖机会？<a class="chance-link" href="#">点击此处</a>每邀请3位朋友注册标桥，可以额外获得1次抽奖机会，上不封顶！</p>
-					<img src="images/awardtable.jpg" alt="" />
-				</div>
-			</div>
-			
-			<!-- 软件特惠 活动 -->
-			<div class="soft-box">
-				<div class="flor1">
-					<div class="flor-img l"><img src="images/flor1_img.png" alt="" /></div>
-					<div class="flor-txt l">
-						<div class="flor-txt-beat"><img src="images/flor1_txt.png" alt="" /></div>
-						<p class="flor-txt-dec">
-							<em>·</em> 公路软件（全国版）原价5000元，双十一秒杀价   &ensp; &ensp; &ensp; 4500元/套，再送500元京东券! <br />
-							<em>·</em> 水利软件（地区版）双十一秒
-						</p>
-						<div class="flor-btn"><a class="com-btn" href="#">立即购买</a></div>
-					</div>
-				</div>
-				<div class="flor2">
-					<div class="flor-txt l">
-						<div class="flor-txt-beat"><img src="images/flor2_txt.png" alt="" /></div>
-						<p class="flor-txt-dec">
-							充500元送1次， 充1000元送3次， 充2000元送7次，充3000元送10次。
-						</p>
-						<div class="flor-btn"><a class="com-btn" href="#">立即充值</a></div>
-					</div>
-					<div class="flor-img l"><img src="images/flor2_img.png" alt="" /></div>
-				</div>
-				<div class="flor3">
-					<div class="flor-img l"><img src="images/flor3_img.png" alt="" /></div>
-					<div class="flor-txt l">
-						<div class="flor-txt-beat"><img src="images/flor3_txt.png" alt="" /></div>
-						<p class="flor-txt-dec">
-							购买造价算量组合套装（任一地区造价全套+任一专业算量），立享5折优惠，再送500元京东券！
-						</p>
-						<div class="flor-btn"><a class="com-btn" href="#">立即购买</a></div>
-					</div>
-				</div>
-				<div class="flor4">
-					<div class="flor-txt l">
-						<div class="flor-txt-beat"><img src="images/flor4_txt.png" alt="" /></div>
-						<p class="flor-txt-dec">
-							   双11购买（土建+钢筋、安装）任一专业，直降500元，再送500元京东券，保价全年！
-						</p>
-						<div class="flor-btn"><a class="com-btn" href="#">立即购买</a></div>
-					</div>
-					<div class="flor-img l"><img src="images/flor4_img.png" alt="" /></div>
-				</div>
-				<div class="flor5">
-					<div class="flor5_img"><img src="images/flor5_txt.png" alt="" /></div>
-					<div class="flor5-txt">
-						<p class="flor-txt-dec">购买任一地区全套造价软件（仅限全套专业），直降300元，再送200元京东券！</p>
-						<a class="com-btn" href="#">立即购买</a>
-					</div>
-				</div>
-			</div>
-			
-			<!-- 二维码 -->
-			<div class="qrcode-box">
-				<img class="gou-left" src="images/gou_left.png" alt="" />
-				<div class="qr-img"><img src="images/qrimg.jpg" alt="" /></div>
-				<div class="qr-r">
-					<p>连续三天转发新点双11活动内容至微信朋友圈，截图至 “新点建筑”微信公众号，即可免费领取一次价值100元的清标体验，或20元话费！（仅限前500名）</p>
-					<a class="qr-btn" href="#">点击查看详细操作</a>
-				</div>
+		<button id="button">两只老虎</button>
+		<script type="text/javascript">
+			window.AudioContext = window.AudioContext || window.webkitAudioContext;
+			(function() {
+				if(!window.AudioContext) {
+					alert("你的浏览器不支持 WEB Audio API，换个浏览器或者升级试试吧~");
+					return;
+				}
+
+				var btn = document.getElementById("button");
+
+				var audioCtx = new AudioContext();
+
+				// 发出的声音频率数据，表现为音调的高低
+				var arrFrequency = [261.63, 293.66, 329.63, 261.63, 261.63, 293.66, 329.63, 261.63, 329.63, 
+				349.23, 392.00, 329.63, 249.23, 392.00, 392.00, 440.00, 392.00, 349.23, 329.23, 261.63, 392.00,
+				440.00, 392.00, 349.23, 329.63, 261.63, 293.66, 196.00, 261.63, 293.66, 196.00, 264.63];
 				
-			</div>
-		
-		</div>
-		
-		
-		
-		
-		
+				var start = 0;
+				
+				btn.addEventListener('click',function(){
+					var frequency = arrFrequency[start];
+					if(!frequency){
+						start = 0;
+						frequency = arrFrequency[start];
+					}
+					start++;
+					// 创建音调控制对象
+					var oscillator = audioCtx.createOscillator();
+					// 创建音量控制对象
+					var gainNode = audioCtx.createGain();
+					// 音调音量关联
+					oscillator.connect(gainNode);
+					// 音量和设备关联
+					gainNode.connect(audioCtx.destination);
+					// 音色类型指定为正弦波
+					oscillator.type = 'sine';
+					// 设置音频频率
+					oscillator.frequency.value = frequency;
+					
+					
+					// 先把当前音量设为0
+					gainNode.gain.setValueAtTime(0,audioCtx.currentTime);
+					// 声音音量线性从0到1
+					gainNode.gain.linearRampToValueAtTime(1,audioCtx.currentTime+0.01);
+					// 声音走起
+					oscillator.start(audioCtx.currentTime);
+					
+					// 0.5秒时间内音量指数曲线变为0.01
+					gainNode.gain.exponentialRampToValueAtTime(0.01,audioCtx.currentTime +0.5);
+					// 关闭声音
+					oscillator.stop(audioCtx.currentTime + 0.5);
+				});
+				
+				
+				
+				
+			})();
+		</script>
+
+		<!--<script src="js/index.js"></script>-->
 	</body>
-	<style>
-		html,body,.layui-layer {
-			background-color:transparent;
-		}
-	</style>
-	<script src="js/layer/layer.js"></script>
-	<script src="js/index.js"></script>
-	
+
 </html>
