@@ -118,6 +118,7 @@
 				oscillator.stop(audioCtx.currentTime + 0.5);
 		});
 		$btn.on(mouseup1,function(){
+			event.preventDefault();
 			$(this).removeClass('active');
 		});
 		
