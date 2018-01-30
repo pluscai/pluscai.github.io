@@ -82,7 +82,7 @@
 			mouseup1='mouseup'
 		}
 		
-		$btn[mousedown1](function(){
+		$btn.on(mousedown1,function(){
 			$(this).addClass('active');
 			
 				var frequency = arrFrequency[start];
@@ -117,7 +117,7 @@
 				// 关闭声音
 				oscillator.stop(audioCtx.currentTime + 0.5);
 		});
-		$btn[mouseup1](function(){
+		$btn.on(mouseup1,function(){
 			$(this).removeClass('active');
 		});
 		
