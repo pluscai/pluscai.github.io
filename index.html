@@ -74,10 +74,10 @@
 		     };  
 		}();  
 		var mousedown1,mouseup1;
-		if(os.isPhone){
+		if(os.isPhone || os.isAndroid){
 			mousedown1='touchstart';
 			mouseup1='touchend'
-		}else if(os.isPc || os.isAndroid ) {
+		}else if(os.isPc) {
 			mousedown1='mousedown';
 			mouseup1='mouseup'
 		}
