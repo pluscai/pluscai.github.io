@@ -1,79 +1,101 @@
-<!DOCTYPE 
-html>
+<!DOCTYPE html>
 <html lang="zh-CN">
-
-	<head>
-		<meta charset="UTF-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
-		<meta name="renderer" content="webkit">
-		<link rel="stylesheet" href="css/common.css">
-		<link rel="stylesheet" href="css/index.css">
-		<script src="js/jquery-1.11.0.min.js"></script>
-		<title></title>
-	</head>
-
-	<body>
-		<button id="button">两只老虎</button>
-		<script type="text/javascript">
-			window.AudioContext = window.AudioContext || window.webkitAudioContext;
-			(function() {
-				if(!window.AudioContext) {
-					alert("你的浏览器不支持 WEB Audio API，换个浏览器或者升级试试吧~");
-					return;
-				}
-
-				var btn = document.getElementById("button");
-
-				var audioCtx = new AudioContext();
-
-				// 发出的声音频率数据，表现为音调的高低
-				var arrFrequency = [261.63, 293.66, 329.63, 261.63, 261.63, 293.66, 329.63, 261.63, 329.63, 
-				349.23, 392.00, 329.63, 249.23, 392.00, 392.00, 440.00, 392.00, 349.23, 329.23, 261.63, 392.00,
-				440.00, 392.00, 349.23, 329.63, 261.63, 293.66, 196.00, 261.63, 293.66, 196.00, 264.63];
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="renderer" content="webkit">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/jquery-1.11.0.min.js"></script>
+    <title>标桥课堂-新增页面</title>
+</head>
+<body>
+	<div class="manager-wrap">
+		<img class="managebg" src="images/managebg.png" alt="" />
+		<ul>
+			<li>
+				<a href="#">
+					<div class="manager-top">
+						<div class="manager-icon manager-icon1"></div>
+						<p class="manager-txt">点我演奏新年好(速度自定)</p>
+					</div>
+					<div class="shadow"></div>
+				</a>
 				
-				var start = 0;
-				
-				btn.addEventListener('click',function(){
-					var frequency = arrFrequency[start];
-					if(!frequency){
-						start = 0;
-						frequency = arrFrequency[start];
-					}
-					start++;
-					// 创建音调控制对象
-					var oscillator = audioCtx.createOscillator();
-					// 创建音量控制对象
-					var gainNode = audioCtx.createGain();
-					// 音调音量关联
-					oscillator.connect(gainNode);
-					// 音量和设备关联
-					gainNode.connect(audioCtx.destination);
-					// 音色类型指定为正弦波
-					oscillator.type = 'sine';
-					// 设置音频频率
-					oscillator.frequency.value = frequency;
-					
-					
-					// 先把当前音量设为0
-					gainNode.gain.setValueAtTime(0,audioCtx.currentTime);
-					// 声音音量线性从0到1
-					gainNode.gain.linearRampToValueAtTime(1,audioCtx.currentTime+0.01);
-					// 声音走起
-					oscillator.start(audioCtx.currentTime);
-					
-					// 0.5秒时间内音量指数曲线变为0.01
-					gainNode.gain.exponentialRampToValueAtTime(0.01,audioCtx.currentTime +0.5);
-					// 关闭声音
-					oscillator.stop(audioCtx.currentTime + 0.5);
-				});
-				
-				
-				
-				
-			})();
-		</script>
+			</li>
+			
+		</ul>
+	</div>
+	<script>
+		$(".manager-wrap").height($(window).height());
+		$(window).resize(function(){
+			$(".manager-wrap").height($(window).height());
+		});
+		
+		
+		window.AudioContext = window.AudioContext || window.webkitAudioContext;	
+		if(!window.AudioContext) {
+			alert("你的浏览器不支持 WEB Audio API，换个浏览器或者升级试试吧~");
+			
+		}
 
-		<!--<script src="js/index.js"></script>-->
-	</body>
+		var $btn = $('.manager-wrap li');
 
+		var audioCtx = new AudioContext();
+
+		// 发出的声音频率数据，表现为音调的高低
+		var arrFrequency = [523.25,523.25,523.25,391.09,
+							659.25,659.25,659.25,523.25,
+							523.25,659.25,783.09,783.09,698.46,659.25,587.33,
+							587.33,659.25,698.46,698.46,
+							659.25,587.33,659.25,523.25,
+							523.25,659.25,587.33,391.99,
+							493.88,587.33,523.25
+						];
+		
+		var start = 0;
+		
+		$btn.mousedown(function(){
+			$(this).addClass('active');
+			
+			var frequency = arrFrequency[start];
+			if(!frequency){
+				start = 0;
+				frequency = arrFrequency[start];
+			}
+			start++;
+			// 创建音调控制对象
+			var oscillator = audioCtx.createOscillator();
+			// 创建音量控制对象
+			var gainNode = audioCtx.createGain();
+			// 音调音量关联
+			oscillator.connect(gainNode);
+			// 音量和设备关联
+			gainNode.connect(audioCtx.destination);
+			// 音色类型指定为正弦波
+			oscillator.type = 'sine';
+			// 设置音频频率
+			oscillator.frequency.value = frequency;
+			
+			
+			// 先把当前音量设为0
+			gainNode.gain.setValueAtTime(0,audioCtx.currentTime);
+			// 声音音量线性从0到1
+			gainNode.gain.linearRampToValueAtTime(1,audioCtx.currentTime+0.01);
+			// 声音走起
+			oscillator.start(audioCtx.currentTime);
+			
+			// 0.5秒时间内音量指数曲线变为0.01
+			gainNode.gain.exponentialRampToValueAtTime(0.01,audioCtx.currentTime +0.5);
+			// 关闭声音
+			oscillator.stop(audioCtx.currentTime + 0.5);
+		}).mouseup(function(){
+			$(this).removeClass('active');
+		});	
+		
+
+			
+	
+	</script>
+</body>
 </html>

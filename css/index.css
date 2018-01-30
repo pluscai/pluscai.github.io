@@ -1,5 +1,82 @@
-/**!
- * 泰安市政务服务项目二期工程
- * date:2017-06-14
- * author: csxiang;
- */
+.manager-wrap {
+	width: 100%;
+	height: 650px;
+	overflow: hidden;
+	text-align: center;
+	position: relative;
+}
+.manager-wrap .managebg {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	left: 0px;
+	top: 0px;
+	
+}
+.manager-wrap .managebg img {
+	width: 100%;
+	height: 100%;
+}
+.manager-wrap ul {
+	position: absolute;
+    top: 50%;
+    margin-top: -;
+    margin-top: -140px;
+    width: 100%;
+}
+.manager-wrap li {
+	display: inline-block;
+	margin: 0 16px;
+	overflow: hidden;
+	
+	
+}
+.manager-wrap li a {
+	position: relative;
+	display: block;
+	width: 145px;
+	height: 271px;
+	overflow: hidden;
+}
+.manager-wrap li .manager-top {
+	overflow: hidden;
+	height: 238px;
+	width: 145px;
+	background: url(../images/item1bg.png) no-repeat;
+	transition: 0.2s all;
+}
+.manager-wrap li .manager-icon {
+	width: 80px;
+	height: 80px;
+	margin: 40px auto 10px;
+	background: url(../images/manager_iocns.png) no-repeat;
+}
+.manager-wrap li .shadow {
+	position: absolute;
+    bottom: 0px;
+    left: 20px;
+	width: 106px;
+	height: 27px;
+	background: url(../images/shadow.png);
+}
+.manager-wrap li .manager-icon2 {
+	background-position-x: -80px;
+}
+.manager-wrap li .manager-icon3 {
+	background-position-x: -160px;
+}
+.manager-wrap li .manager-icon4 {
+	background-position-x: -240px;
+}
+.manager-wrap li .manager-icon5 {
+	background-position-x: -320px;
+}
+.manager-wrap li .manager-txt {
+	font-size: 18px;
+	color: #135b80;
+	text-align: center;
+}
+.manager-wrap li.active .manager-top{
+	margin-top: 10px;
+}
