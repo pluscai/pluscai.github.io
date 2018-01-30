@@ -82,7 +82,7 @@
 			mouseup1='mouseup'
 		}
 		
-		$btn.on(mousedown1,function(){
+		$btn.on(mousedown1,function(event){
 			$(this).addClass('active');
 			
 				var frequency = arrFrequency[start];
@@ -116,8 +116,10 @@
 				gainNode.gain.exponentialRampToValueAtTime(0.01,audioCtx.currentTime +0.5);
 				// 关闭声音
 				oscillator.stop(audioCtx.currentTime + 0.5);
+				
+				event.preventDefault();
 		});
-		$btn.on(mouseup1,function(){
+		$btn.on(mouseup1,function(event){
 			event.preventDefault();
 			$(this).removeClass('active');
 		});
